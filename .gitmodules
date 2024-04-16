@@ -4,9 +4,6 @@
 [submodule "AstroNvim"]
 	path = AstroNvim
 	url = git@github.com:AstroNvim/AstroNvim.git
-[submodule " AstroNvim/lua/user"]
-	path =  AstroNvim_user
-	url = git@github.com:hellovuong/nvim_config.git
 [submodule "AstroNvim_hellovuong"]
 	path = AstroNvim_hellovuong
 	url = git@github.com:hellovuong/AstroNvim_hellovuong.git
