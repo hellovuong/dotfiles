@@ -141,8 +141,9 @@ alias la='ls -A'
 alias l='ls -CF'
 ## custom alias
 alias clion='/home/vuong/Dev/clion-2022.2.4/bin/clion.sh'
-alias rz='rviz -d ~/default.rviz'
-alias cd_ws='cd /home/vuong/Dev/robotics/ws'
+alias rz='rviz -d ~/default2.rviz'
+alias cd_ws='cd /home/vuong/Dev/robotics/ws_2'
+alias cd_src='cd /home/vuong/Dev/robotics/ws_2/src/monorepo'
 
 ## Libraries / programs
 # tmux source-file
@@ -156,9 +157,9 @@ export CUDA_ROOT=/usr/local/cuda-11.5
 
 # source ROS
 source /opt/ros/noetic/setup.zsh
-source /home/vuong/Dev/robotics/ws/devel/setup.zsh
+source /home/vuong/Dev/robotics/ws_2/devel/setup.zsh
 export ROS_MASTER_URI="http://vuong-ThinkPad:11311"
-export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${file}] [${function}] [${line}]: ${message}'
+export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${file}] [${node}] [${function}] [${line}]: ${message}'
 
 # FZF Keybindings
 . /usr/share/doc/fzf/examples/key-bindings.zsh
@@ -169,10 +170,7 @@ export PATH="/usr/lib/ccache:$PATH"
 # default config dir
 export XDG_CONFIG_HOME="$HOME/.config"
 
-# Start tmux if not running yet
-#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#	exec tmux
-#fi
+export TERM=alacritty
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -193,3 +191,32 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+#### nvm
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+### ccache
+export PATH="/usr/lib/ccache:$PATH"
+
+### autojump
+[[ -s /home/vuong/.autojump/etc/profile.d/autojump.sh ]] && source /home/vuong/.autojump/etc/profile.d/autojump.sh
+autoload -U compinit && compinit -u
+
+### nnn config
+alias nnn='/usr/local/bin/nnn -e' # -d for details and -e to open files in $VISUAL (for other options, see 'man nnn'...)
+alias lsn='nnn -de'
+#-----
+export NNN_OPTS="H" # 'H' shows the hidden files. Same as option -H (so 'nnn -deH')
+export LC_COLLATE="C" # hidden files on top
+export NNN_FIFO="/tmp/nnn.fifo" # temporary buffer for the previews
+export NNN_FCOLORS="AAAAE631BBBBCCCCDDDD9999" # feel free to change the colors
+export NNN_TERM="tmux"
+export NNN_PLUG='p:preview-tui;j:autojump;c:fzcd;i:imgview;d:dragdrop;b:cdpath;n:nvim_opener' # many other plugins are available here: https://github.com/jarun/nnn/tree/master/plugins
+# export VISUAL=ewrap # neovim as text editor
+export VISUAL=nvim
+export SPLIT='v' # to split vertically
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"

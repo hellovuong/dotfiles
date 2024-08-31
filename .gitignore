@@ -1,1 +1,5 @@
 AstroNvim
+.idea
+nnn/*
+!nnn/plugins/nvim_opener
+!nnn/plugins/preview-tui
