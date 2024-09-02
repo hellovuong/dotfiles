@@ -183,13 +183,13 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "Resize"
 
 # shutdown / restart / suspend...
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
 
 mode "$mode_system" {
-    bindsym l exec --no-startup-id betterlockscreen -l dim, mode "default"
+    bindsym l exec --no-startup-id betterlockscreen -l dim blur, mode "default"
     bindsym e exec --no-startup-id i3-msg exit, mode "default"
     bindsym s exec --no-startup-id betterlockscreen -l dim && systemctl suspend, mode "default"
     bindsym h exec --no-startup-id betterlockscreen -l dim && systemctl hibernate, mode "default"
@@ -212,14 +212,15 @@ bindsym $mod+minus scratchpad show
 # Necessary for i3-gaps to work properly (pixel can be any value)
 
 # Smart Gaps
-smart_gaps on
+# smart_gaps on
 
 # Smart Borders
-smart_borders on
+# smart_borders on
 
 # Set inner/outer gaps
-gaps inner 5 
-gaps outer 5
+for_window [class="^.*"] border pixel 1
+gaps inner 10 
+gaps outer -5 
 
 # floating window
 for_window [class="Yad"] floating enable
