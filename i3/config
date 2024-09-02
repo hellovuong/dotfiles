@@ -159,7 +159,7 @@ bindsym $mod+Shift+r restart
 #bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
-mode "resize" {
+mode "Resize" {
         # These bindings trigger as soon as you enter the resize mode
 
         # Pressing left will shrink the window’s width.
@@ -186,7 +186,7 @@ mode "resize" {
 bindsym $mod+r mode "Resize"
 
 # shutdown / restart / suspend...
-set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (CTRL+s) shutdown
+set $mode_system System (l) Lock, (e) Logout, (s) Suspend, (h) Hibernate, (r) Reboot, (CTRL+s) Shutdown
 
 mode "$mode_system" {
     bindsym l exec --no-startup-id betterlockscreen -l dim blur, mode "default"
