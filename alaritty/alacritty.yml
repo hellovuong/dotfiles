@@ -86,7 +86,7 @@ font:
     style: Bold Italic
 
   # Point size
-  size: 7.0
+  size: 10.0
 
 # If `true`, bold text is drawn using the bright color variants.
 draw_bold_text_with_bright_colors: true
@@ -183,4 +183,4 @@ tokyo-night-storm: &tokyo-night-storm
 # *OneDark
 # *tokyo-night
 # *tokyo-night-storm
-colors: *tokyo-night
+colors: *OneDark
