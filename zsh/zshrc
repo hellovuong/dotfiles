@@ -172,8 +172,6 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 export TERM=alacritty
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source "$HOME/.cargo/env"
 
 # >>> conda initialize >>>
@@ -213,10 +211,12 @@ export NNN_FIFO="/tmp/nnn.fifo" # temporary buffer for the previews
 export NNN_FCOLORS="AAAAE631BBBBCCCCDDDD9999" # feel free to change the colors
 export NNN_TERM="tmux"
 export NNN_PLUG='p:preview-tui;j:autojump;c:fzcd;i:imgview;d:dragdrop;b:cdpath;n:nvim_opener' # many other plugins are available here: https://github.com/jarun/nnn/tree/master/plugins
-# export VISUAL=ewrap # neovim as text editor
 export VISUAL=nvim
 export SPLIT='v' # to split vertically
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# To customize prompt, run `p10k configure` or edit ~/dotfiles/p10k/p10k.zsh.
+[[ ! -f ~/dotfiles/p10k/p10k.zsh ]] || source ~/dotfiles/p10k/p10k.zsh
