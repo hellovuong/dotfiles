@@ -227,9 +227,9 @@ for_window [class="Yad"] floating enable
 for_window [class="AnyDesk"] floating enable
 
 # Startup programs
-exec --no-startup-id picom  --config $HOME/.config/picom.cfg
-exec --no-startup-id betterlockscreen -w dim
-exec --no-startup-id systemctl enable pulseaudio.service --user
-exec --no-startup-id pulseaudio --start
+exec_always --no-startup-id picom  --config $HOME/.config/picom.cfg
+exec_always --no-startup-id betterlockscreen -w dim
+exec_always --no-startup-id systemctl enable pulseaudio.service --user
+exec_always --no-startup-id pulseaudio --start
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id setxkbmap us
