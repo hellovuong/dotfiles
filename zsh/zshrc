@@ -73,7 +73,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
+source /home/vuong/dotfiles/zsh-syntax-highlighting/themes/catppuccin_macchiato-zsh-syntax-highlighting.zsh
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -88,7 +88,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -142,9 +142,11 @@ alias rz='rviz -d ~/default2.rviz'
 alias cd_ws='cd /home/vuong/Dev/robotics/ws_2'
 alias cd_src='cd /home/vuong/Dev/robotics/ws_2/src/monorepo'
 
-## Libraries / programs
-# tmux source-file
-tmux source-file /home/vuong/.config/tmux/.tmux.conf
+# replace ls with more pretty colorls
+alias ls='colorls'
+
+# tmux alias
+# alias tmux='tmux -f "$HOME/.config/tmux/tmux.conf"'
 
 # CUDA version
 export PATH=/usr/local/cuda-11.5/bin${PATH:+:${PATH}}
@@ -161,13 +163,16 @@ export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${file}] [${node}] [${functio
 # FZF Keybindings
 . /usr/share/doc/fzf/examples/key-bindings.zsh
 
+# go
+export PATH=$PATH:/usr/local/go/bin
+
 # ccache
 export PATH="/usr/lib/ccache:$PATH"
 
 # default config dir
 export XDG_CONFIG_HOME="$HOME/.config"
 
-export TERM=alacritty
+export TERM=xterm-256color
 
 source "$HOME/.cargo/env"
 
@@ -215,5 +220,8 @@ export SPLIT='v' # to split vertically
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# To customize prompt, run `p10k configure` or edit ~/dotfiles/p10k/p10k.zsh.
-[[ ! -f ~/dotfiles/p10k/p10k.zsh ]] || source ~/dotfiles/p10k/p10k.zsh
+# colorls
+source $(dirname $(gem which colorls))/tab_complete.sh
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
