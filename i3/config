@@ -219,8 +219,8 @@ bindsym $mod+minus scratchpad show
 
 # Set inner/outer gaps
 for_window [class="^.*"] border pixel 1
-gaps inner 10 
-gaps outer -5 
+gaps inner 20 
+gaps outer 10
 
 # floating window
 for_window [class="Yad"] floating enable
