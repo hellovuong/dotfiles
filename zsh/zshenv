@@ -5,6 +5,9 @@ export TERM=xterm-256color
 
 . "$HOME/.cargo/env"
 
+# FZF Keybindings
+. /usr/share/doc/fzf/examples/key-bindings.zsh
+
 export EDITOR="NVIM_APPNAME=astronvim_v4 nvim"
 
 export LANG=en_US.UTF-8

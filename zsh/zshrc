@@ -79,7 +79,7 @@ source /home/vuong/dotfiles/zsh-syntax-highlighting/themes/catppuccin_macchiato-
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fzf command-not-found fancy-ctrl-z colored-man-pages copypath zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(fzf command-not-found colored-man-pages copypath zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -147,9 +147,6 @@ alias lsn='nnn -de'
 
 # replace ls with more pretty colorls
 alias ls='colorls'
-
-# FZF Keybindings
-. /usr/share/doc/fzf/examples/key-bindings.zsh
 
 ### cargo
 source "$HOME/.cargo/env"
