@@ -1,0 +1,20 @@
+# default config dir
+export XDG_CONFIG_HOME="$HOME/.config"
+
+export TERM=xterm-256color
+
+. "$HOME/.cargo/env"
+
+export EDITOR="NVIM_APPNAME=astronvim_v4 nvim"
+
+export LANG=en_US.UTF-8
+
+### nnn config
+export NNN_OPTS="H" # 'H' shows the hidden files. Same as option -H (so 'nnn -deH')
+export LC_COLLATE="C" # hidden files on top
+export NNN_FIFO="/tmp/nnn.fifo" # temporary buffer for the previews
+export NNN_FCOLORS="AAAAE631BBBBCCCCDDDD9999" # feel free to change the colors
+export NNN_TERM="tmux"
+export NNN_PLUG='p:preview-tui;j:autojump;c:fzcd;i:imgview;d:dragdrop;b:cdpath;n:nvim_opener' # many other plugins are available here: https://github.com/jarun/nnn/tree/master/plugins
+export VISUAL=nvim
+export SPLIT='v' # to split vertically

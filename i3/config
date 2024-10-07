@@ -269,4 +269,4 @@ exec_always --no-startup-id systemctl enable pulseaudio.service --user
 exec_always --no-startup-id pulseaudio --start
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always --no-startup-id setxkbmap us
-exec_always --no-startup-id xidlehook --not-when-fullscreen --timer 60 'betterlockscreen -l dim blur' ''
+exec_always --no-startup-id xidlehook --not-when-fullscreen --timer 300 'betterlockscreen -l dim blur' ''
