@@ -1,9 +1,3 @@
-[submodule "AstroNvim"]
-	path = AstroNvim
-	url = git@github.com:AstroNvim/AstroNvim.git
-[submodule "AstroNvim_hellovuong"]
-	path = AstroNvim_hellovuong
-	url = git@github.com:hellovuong/AstroNvim_hellovuong.git
 [submodule "tmux/plugins/catppuccin"]
 	path = tmux/plugins/catppuccin
 	url = https://github.com/catppuccin/tmux.git
