@@ -2,6 +2,7 @@
 export XDG_CONFIG_HOME="$HOME/.config"
 
 export TERM=xterm-256color
+export BROWSER=firefox
 
 . "$HOME/.cargo/env"
 
@@ -11,6 +12,21 @@ export TERM=xterm-256color
 export EDITOR="NVIM_APPNAME=astronvim_v4 nvim"
 
 export LANG=en_US.UTF-8
+
+#export CUDA_HOME=/usr/local/cuda
+#export CUDA_ROOT=/usr/local/cuda-12.2
+# CUDA version
+#export PATH=/usr/local/cuda-12.2/bin${PATH:+:${PATH}}
+#export LD_LIBRARY_PATH=/usr/local/cuda-12.2/lib64${LD_LIBRARY_PATH:+:${LD_LIBRARY_PATH}}
+
+# source ROS
+export ROS_MASTER_URI="http://vuong-ThinkPad:11311"
+export ROSCONSOLE_FORMAT='[${severity}] [${time}] [${file}] [${node}] [${function}] [${line}]: ${message}'
+
+#### nvm
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 ### nnn config
 export NNN_OPTS="H" # 'H' shows the hidden files. Same as option -H (so 'nnn -deH')
